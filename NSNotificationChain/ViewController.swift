@@ -15,8 +15,11 @@ extension NSNotification.Name {
 final class ViewController: UIViewController {
 
     static var vcCount = 0
-    
     @IBOutlet var vcNumLabel: UILabel!
+    
+    var numText: String {
+        return vcNumLabel.text ?? "Err"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +28,15 @@ final class ViewController: UIViewController {
                                                selector: #selector(observerAction),
                                                name: .vcAction,
                                                object: nil)
-        print("did register VC \(vcNumLabel.text ?? "Err")")
+        print("did register VC \(numText)")
     }
     
     @objc func observerAction() {
-        print("VC \(vcNumLabel.text ?? "Err") reporting in")
+        print("VC \(numText) reporting in")
     }
     
     @IBAction func postAction(_ sender: Any) {
-        print("VC \(vcNumLabel.text ?? "Err") did post notification")
+        print("VC \(numText) did post notification")
         NotificationCenter.default.post(name: .vcAction,
                                         object: nil)
     }
@@ -46,7 +49,6 @@ final class ViewController: UIViewController {
 
 extension ViewController {
     static func newVC() -> ViewController {
-        
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         return storyboard.instantiateInitialViewController() as! ViewController
     }
