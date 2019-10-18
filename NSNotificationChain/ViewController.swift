@@ -43,13 +43,19 @@ final class ViewController: UIViewController {
     
     @IBAction func pushAction(_ sender: Any) {
         ViewController.vcCount += 1
-        present(ViewController.newVC(), animated: true, completion: nil)
+        navigationController?.pushViewController(ViewController.newVC(),
+                                                 animated: true)
     }
+    
+    deinit {
+        print("VC \(numText) was destroyed!")
+    }
+    
 }
 
 extension ViewController {
     static func newVC() -> ViewController {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        return storyboard.instantiateInitialViewController() as! ViewController
+        return storyboard.instantiateViewController(withIdentifier: "vc") as! ViewController
     }
 }
