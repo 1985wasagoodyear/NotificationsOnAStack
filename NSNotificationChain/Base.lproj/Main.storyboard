@@ -1,42 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f1F-J8-h58">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f1F-J8-h58">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Notify View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="vc" id="BYZ-38-t0r" customClass="ViewController" customModule="NSNotificationChain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="BYZ-38-t0r" customClass="NotifyViewController" customModule="NSNotificationChain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCX-P0-Sff">
-                                <rect key="frame" x="8" y="606.5" width="398" height="247.5"/>
-                                <color key="backgroundColor" red="1" green="0.60532370944445124" blue="0.4853546662598005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Push VC">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIs-X1-pJW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1w-yW-aQi">
-                                <rect key="frame" x="8" y="96" width="398" height="247.5"/>
+                                <rect key="frame" x="8" y="96" width="398" height="183.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-CX-1ig">
-                                <rect key="frame" x="8" y="351.5" width="398" height="247"/>
+                                <rect key="frame" x="8" y="287.5" width="398" height="183.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.65595090389251709" blue="0.99662786722183228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Post Notification">
@@ -46,25 +33,57 @@
                                     <action selector="postAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v7Z-ow-5ev"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCX-P0-Sff">
+                                <rect key="frame" x="8" y="479" width="398" height="183.5"/>
+                                <color key="backgroundColor" red="1" green="0.60532370944445124" blue="0.4853546662598005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Push VC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIs-X1-pJW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOR-Lr-wHD">
+                                <rect key="frame" x="8" y="670.5" width="398" height="183.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Test Push 100">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testPush100VCsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6AW-Ia-DbX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="l1w-yW-aQi" firstAttribute="height" secondItem="tCX-P0-Sff" secondAttribute="height" id="4zY-4t-AWO"/>
                             <constraint firstItem="tCX-P0-Sff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="70j-9s-O3u"/>
+                            <constraint firstItem="cOR-Lr-wHD" firstAttribute="trailing" secondItem="tCX-P0-Sff" secondAttribute="trailing" id="8yC-Od-OuY"/>
                             <constraint firstItem="RT5-CX-1ig" firstAttribute="top" secondItem="l1w-yW-aQi" secondAttribute="bottom" constant="8" id="BBL-IH-5E1"/>
                             <constraint firstItem="RT5-CX-1ig" firstAttribute="height" secondItem="l1w-yW-aQi" secondAttribute="height" id="FKv-UR-mx5"/>
                             <constraint firstItem="l1w-yW-aQi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="LlU-5w-vle"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l1w-yW-aQi" secondAttribute="trailing" constant="8" id="TaD-Wh-ZsI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tCX-P0-Sff" secondAttribute="bottom" constant="8" id="YdH-bK-6fZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cOR-Lr-wHD" secondAttribute="bottom" constant="8" id="YcL-5u-pmD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tCX-P0-Sff" secondAttribute="trailing" constant="8" id="cL7-gp-7XK"/>
                             <constraint firstItem="l1w-yW-aQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="cUI-sK-rmi"/>
                             <constraint firstItem="RT5-CX-1ig" firstAttribute="trailing" secondItem="l1w-yW-aQi" secondAttribute="trailing" id="dXZ-3J-vA9"/>
+                            <constraint firstItem="cOR-Lr-wHD" firstAttribute="top" secondItem="tCX-P0-Sff" secondAttribute="bottom" constant="8" id="gB0-W4-QtJ"/>
                             <constraint firstItem="RT5-CX-1ig" firstAttribute="leading" secondItem="l1w-yW-aQi" secondAttribute="leading" id="gis-oh-LFR"/>
                             <constraint firstItem="tCX-P0-Sff" firstAttribute="top" secondItem="RT5-CX-1ig" secondAttribute="bottom" constant="8" id="rzy-2f-vws"/>
+                            <constraint firstItem="cOR-Lr-wHD" firstAttribute="height" secondItem="tCX-P0-Sff" secondAttribute="height" id="sN3-cl-Vrb"/>
+                            <constraint firstItem="cOR-Lr-wHD" firstAttribute="leading" secondItem="tCX-P0-Sff" secondAttribute="leading" id="vgV-Hj-Rkj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cgk-LU-pr6"/>
+                    <navigationItem key="navigationItem" id="Cgk-LU-pr6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="wIl-wL-5Z9">
+                            <connections>
+                                <action selector="flushAllVCsAction:" destination="BYZ-38-t0r" id="lRx-n2-7fz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="vcNumLabel" destination="l1w-yW-aQi" id="KqY-3b-hce"/>
                     </connections>
